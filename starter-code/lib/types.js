@@ -21,6 +21,13 @@ const castToNumber = val => {
   return number;
 };
 
+const castToString = value => {
+  if(isString(value)) return value;
+  if(!value) throw new CastError(value);
+  const string = JSON.stringify(value);
+  return string;
+};
+
 class CastError extends Error {
   constructor(Type, value) {
     const type = Type.name;
@@ -48,4 +55,5 @@ module.exports = {
   CastError,
   getCaster,
   castToNumber,
+  castToString
 };
