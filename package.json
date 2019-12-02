@@ -1,0 +1,25 @@
+{
+  "name": "TDD-witth-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^24.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "test:watch": "npm run test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelpdurham/TDD-witth-jest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joelpdurham/TDD-witth-jest/issues"
+  },
+  "homepage": "https://github.com/joelpdurham/TDD-witth-jest#readme"
+}
