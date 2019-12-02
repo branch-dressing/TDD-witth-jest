@@ -2,7 +2,10 @@ const isNumber = val => typeof val === 'number';
 
 const isString = value => typeof value === 'string';
 
-
+const isBoolean = value => typeof value === 'boolean';
+//Array
+//Object
+//Function
 
 const castToNumber = val => {
   if(isNumber(val)) return val;
@@ -31,6 +34,7 @@ const getCaster = Type => {
 module.exports = {
   isNumber,
   isString,
+  isBoolean,
   CastError,
   getCaster,
   castToNumber,
