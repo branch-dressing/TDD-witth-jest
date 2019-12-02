@@ -107,7 +107,8 @@ describe('validator module', () => {
 
   it('throws if value is not castable to a string', () => {
     expect(() => castToString(null)).toThrowErrorMatchingSnapshot();
-  })
+    expect(() => castToString(undefined)).toThrowErrorMatchingSnapshot();
+  });
   
   it('can get the right caster', () => {
     expect(getCaster(Number)).toEqual(castToNumber);

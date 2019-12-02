@@ -5,3 +5,5 @@ exports[`validator module casters throws if value is not castable to number 1`] 
 exports[`validator module casters throws if value is not castable to number 2`] = `"Cannot cast >>[object Object]<< to Number"`;
 
 exports[`validator module throws if value is not castable to a string 1`] = `"Cannot read property 'name' of null"`;
+
+exports[`validator module throws if value is not castable to a string 2`] = `"Cannot read property 'name' of undefined"`;
