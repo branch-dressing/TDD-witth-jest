@@ -28,6 +28,11 @@ const castToString = value => {
   return string;
 };
 
+const castToBoolean = value => {
+  if(value) return true;
+  return false;
+};
+
 class CastError extends Error {
   constructor(Type, value) {
     const type = Type.name;
@@ -55,5 +60,6 @@ module.exports = {
   CastError,
   getCaster,
   castToNumber,
-  castToString
+  castToString,
+  castToBoolean
 };
