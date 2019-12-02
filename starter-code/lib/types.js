@@ -50,6 +50,9 @@ class CastError extends Error {
 
 const casters = {
   Number: castToNumber,
+  String: castToString,
+  Boolean: castToBoolean,
+  Array: castToArray
 };
 
 const getCaster = Type => {  
