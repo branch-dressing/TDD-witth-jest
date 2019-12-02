@@ -12,7 +12,7 @@ const isObject = value => {
   return typeof value === 'object';
 };
 
-//Function
+const isFunction = value => typeof value === 'function';
 
 const castToNumber = val => {
   if(isNumber(val)) return val;
@@ -44,6 +44,7 @@ module.exports = {
   isBoolean,
   isArray,
   isObject,
+  isFunction,
   CastError,
   getCaster,
   castToNumber,
