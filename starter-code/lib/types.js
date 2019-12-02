@@ -23,7 +23,7 @@ const castToNumber = val => {
 
 const castToString = value => {
   if(isString(value)) return value;
-  if(!value) throw new CastError(value);
+  if(!value) throw new CastError(String, value);
   const string = JSON.stringify(value);
   return string;
 };
@@ -31,6 +31,12 @@ const castToString = value => {
 const castToBoolean = value => {
   if(value) return true;
   return false;
+};
+
+const castToArray = value => {
+  if(isArray(value)) return value;
+  if(!value || isFunction(value)) throw new CastError(Array, value);
+  return [value];
 };
 
 class CastError extends Error {
@@ -61,5 +67,6 @@ module.exports = {
   getCaster,
   castToNumber,
   castToString,
-  castToBoolean
+  castToBoolean,
+  castToArray
 };
