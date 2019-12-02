@@ -1,5 +1,9 @@
 const isNumber = val => typeof val === 'number';
 
+const isString = value => typeof value === 'string';
+
+
+
 const castToNumber = val => {
   if(isNumber(val)) return val;
   const number = Number(val);
@@ -26,6 +30,7 @@ const getCaster = Type => {
 
 module.exports = {
   isNumber,
+  isString,
   CastError,
   getCaster,
   castToNumber,
