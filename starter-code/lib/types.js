@@ -3,7 +3,8 @@ const isNumber = val => typeof val === 'number';
 const isString = value => typeof value === 'string';
 
 const isBoolean = value => typeof value === 'boolean';
-//Array
+
+const isArray = value => Array.isArray(value);
 //Object
 //Function
 
@@ -35,6 +36,7 @@ module.exports = {
   isNumber,
   isString,
   isBoolean,
+  isArray,
   CastError,
   getCaster,
   castToNumber,
